@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Pic Moment</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,6 +10,7 @@
     What does it doing?.
   </p>
   <button (click)="takePicture()" ion-button>Take a picture</button>
+  <button ion-button (click)="pickPhoto()">Choose Gallery</button>
   <h3> Latest Picture:</h3>
   <ion-card  *ngFor="let image of images" width-50>
       <img [src]="image.url"/>

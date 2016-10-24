@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Camera } from 'ionic-native';
+import { ChooseGallery } from '../../components/choose-gallery/duty';
 
 @Component({
   selector: 'page-home',
@@ -30,4 +31,5 @@ export class HomePage {
       console.log(err);
     });
   }
+
 }
