@@ -1,17 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Pic Moment</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+<ion-content class="card-background-page" padding>
+  <h2>Take a picture</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    What does it doing?.
   </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <button (click)="takePicture()" ion-button>Take a picture</button>
+  <button ion-button (click)="pickPhoto()">Choose Gallery</button>
+  <h3> Latest Picture:</h3>
+  <ion-card  *ngFor="let image of images" width-50>
+      <img [src]="image.url"/>
+      <div class="card-title">Image</div>
+      <div class="card-subtitle">Picture</div>
+  </ion-card>
+
 </ion-content>
